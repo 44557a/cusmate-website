@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POD 母体数据库控制台</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside id="appSidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <p class="eyebrow">POD</p>
+        <h1>母体数据库</h1>
+      </div>
+      <div class="sidebar-nav-wrap">
+        <div class="function-tabs-meta">
+          <span class="section-note">功能选项卡</span>
+          <span class="section-title">功能导航</span>
+        </div>
+        <nav id="pageNav" class="page-nav function-tabs"></nav>
+      </div>
+      <div class="sidebar-footer">
+        <button id="refreshAllBtn" class="ghost-btn full-width-btn" type="button">刷新数据</button>
+      </div>
+    </aside>
+
+    <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
+
+    <main class="main-area main-shell full-width">
+      <header class="topbar compact-topbar">
+        <div class="topbar-primary">
+          <button id="sidebarToggleBtn" class="icon-btn sidebar-toggle" type="button" aria-label="切换导航" aria-expanded="false">☰</button>
+          <div>
+            <h2 id="pageTitle">加载中</h2>
+            <p id="pageDesc" class="page-desc">正在读取页面说明...</p>
+          </div>
+        </div>
+        <div class="topbar-actions topbar-search-wrap">
+          <div id="headerSignalBar" class="header-signal-bar"></div>
+          <div class="header-search-box">
+            <input id="globalSearchInput" type="search" placeholder="全局搜索：母体 / SKU / 属性 / 模板 / 供应商 / 渠道">
+            <div id="globalSearchDropdown" class="search-dropdown"></div>
+          </div>
+        </div>
+      </header>
+
+      <section id="summaryBar" class="summary-strip"></section>
+      <section id="pageActions" class="page-actions"></section>
+      <section id="pageContent" class="page-content"></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <div id="modalRoot"></div>
+
+  <script src="/static/js/core.js"></script>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/shell.js"></script>
+  <script src="/static/js/page-parents.js"></script>
+  <script src="/static/js/page-attributes.js"></script>
+  <script src="/static/js/page-combinations.js"></script>
+  <script src="/static/js/page-skus.js"></script>
+  <script src="/static/js/page-supply.js"></script>
+  <script src="/static/js/page-freight.js"></script>
+  <script src="/static/js/page-misc.js"></script>
+  <script src="/static/js/boot.js"></script>
+</body>
+</html>
